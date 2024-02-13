@@ -3,11 +3,11 @@
 namespace App\Http\Controllers\Customer;
 
 use App\Http\Controllers\Controller;
-use App\Models\Helpers\CommonHelper;
 
 class HomeController extends Controller
 
-{   use CommonHelper;
+{
+
     /**
      * Create a new controller instance.
      *

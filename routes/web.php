@@ -1,6 +1,5 @@
 <?php
 
-use App\Models\WorkingHour;
 use Illuminate\Support\Facades\Route;
 
 include 'customer.php'; 
@@ -22,8 +21,7 @@ Route::prefix('admin')->group( function() {
 });
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
-	Route::middleware(['auth:web','verified'])->group( function() {	
-    
+	Route::middleware(['auth:web','verified'])->group( function() {	    
         //Home
         Route::get('/home', 'HomeController@index')->name('home');
         
@@ -31,16 +29,12 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'], function () {
         Route::resource('setting','SettingController')->only(['index','create','store']);
         Route::post('setting/update/','SettingController@update')->name('setting.update');
 
-        
         //products
         Route::resource('products', 'ProductController');
         Route::post('/products/ajax', 'ProductController@index_ajax')->name('dt_products');
         Route::post('/products/status', 'ProductController@status')->name('status_product');
         Route::get('sent_notification_manually', 'ProductController@sent_notification_manually')->name('sent_notification_manually');
-
     });
-
- 
 });
 
 //SUPPORT

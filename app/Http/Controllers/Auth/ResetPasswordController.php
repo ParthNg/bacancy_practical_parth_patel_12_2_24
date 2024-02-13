@@ -31,13 +31,6 @@ class ResetPasswordController extends Controller
         ];
     }
 
-    // protected function validationErrorMessages()
-    // {
-    //     return [
-    //     'password.regex'  => 'Password Must Contain Upper-case, Lower-case, Number and Special characters Like (~!@#$%^&*()_+=-?.',
-    //     ];
-    // }
-
     /**
      * Where to redirect users after resetting their password.
      *

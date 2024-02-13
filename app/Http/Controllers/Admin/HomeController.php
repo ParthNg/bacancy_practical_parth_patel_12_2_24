@@ -4,21 +4,10 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Profile;
 use App\Models\Product;
-use App\Models\Order;
-use App\Models\Enquiry;
-use Auth;
-use App;
-use Carbon\Carbon;
-use Carbon\CarbonPeriod;
-use DB;
-use App\Models\Helpers\CommonHelper;
 
 class HomeController extends Controller
 {
-    use CommonHelper;
     /**
      * Create a new controller instance.
      *

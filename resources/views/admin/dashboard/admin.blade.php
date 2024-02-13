@@ -1,10 +1,6 @@
 @extends('layouts.admin.app')
 
 @section('css')
-  <style>
-    .select2-container {border: 1px solid #fd9d3e;}
-    #EnquiryChart{border: 2px solid #fd9d3e;}
-  </style>
 @endsection
 
 @section('content')
@@ -29,7 +25,7 @@
         <div class="col-md-3 col-sm-6 col-xs-12">
           <a href="{{route('products.index')}}">
             <div class="info-box">
-              <span class="info-box-icon bg-yellow" style="padding: 20px;"><i class="fa fa-list"></i></span>
+              <span class="info-box-icon bg-yellow"><i class="fa fa-list"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text">Products</span>
                 <span class="info-box-number">{{$total_products}}</span>
@@ -87,16 +83,3 @@
 
 @endsection
 
-@section('js')
-<!-- jvectormap  -->
-<script src="{{ asset('adminAsset/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}"></script>
-<script src="{{ asset('adminAsset/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}"></script>
-<!-- ChartJS -->
-<script src="{{ asset('adminAsset/bower_components/chart.js/Chart.js') }}"></script>
-<!-- adminAssetLTE for demo purposes -->
-<script src="{{ asset('adminAsset/dist/js/demo.js') }}"></script>
-
-
-@section('css')
-<!-- <link rel="stylesheet" href="{{ asset('admin/dist/css/skins/_all-skins.min.css') }}"> -->
-@endsection

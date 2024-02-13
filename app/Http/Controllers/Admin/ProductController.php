@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Inventory;
-use App\Models\Helpers\CommonHelper;
 use Illuminate\Validation\Rule;
 use Validator;
 use DB;
@@ -15,7 +14,6 @@ use Illuminate\Support\Facades\Artisan;
 
 class ProductController extends Controller
 { 
-  use CommonHelper;
 
     public function __construct(){
         $this->middleware('auth');
@@ -89,7 +87,6 @@ class ProductController extends Controller
      */
     public function create(){
         $page_title = 'Add New Product';
-        // $products = Product::where('status','active')->get();
         return view('admin.products.create', compact('page_title'));
     }
     /**
@@ -221,9 +218,7 @@ class ProductController extends Controller
             $data = Product::find($id);
             $data->fill($input_data);
             $data->save();
-            
-
-            
+                   
             /* ############ Lot ITEMS ############ */
             // Separate the data based on the numeric index in the field names
             $groupedData = [];

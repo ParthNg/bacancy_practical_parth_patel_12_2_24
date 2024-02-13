@@ -37,34 +37,4 @@ class CacheController extends Controller
       return "Application Cache is cleared"; 
     }
 
-    public function rnd() {
-
-        // $a = ['furnished', 'semi&nbsp;furnished', 'un furnished'];
-        // dd(in_array('semi&nbsp;furnished', $a));
-        // $number = 231;
-        // $fourDigitNumber = str_pad($number, 5, '0', STR_PAD_LEFT);
-        // dd($fourDigitNumber);
-
-        $price = 8000200.00; // Example price in rupees
-        $formattedPrice = $this->convertPrice($price);
-        echo $formattedPrice;die;
-    }
-
-    public function convertPrice($price)
-    {
-        $formattedPrice = '';
-        
-        if ($price >= 10000000) {
-            $formattedPrice = ($price / 10000000) . ' Cr';
-        } elseif ($price >= 100000) {
-            $formattedPrice = ($price / 100000) . ' Lakh';
-        } elseif ($price >= 1000) {
-            $formattedPrice = ($price / 1000) . ' Thousand';
-        } else {
-            $formattedPrice = $price;
-        }
-        
-        return $formattedPrice;
-    }
-    
 }

@@ -165,7 +165,6 @@
         ]
       });
     }
-    $('.select2').select2();
   });
   function delete_alert() {
     if(confirm("Do you really want to delete the item?")){

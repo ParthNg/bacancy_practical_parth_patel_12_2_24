@@ -41,7 +41,7 @@
                       <div class="col-md-6">
                         <div class="form-group">
                           <label for="content" class="content-label">{{ucwords(str_replace('_',' ',$k))}}</label>
-                          <input class="form-control" minlength="2" maxlength="255" placeholder="{{trans('setting.'.strtolower($k))}}" name="{{$k}}" type="text" value="{{$v}}">
+                          <input class="form-control" minlength="2" maxlength="255" placeholder="" name="{{$k}}" type="text" value="{{$v}}">
                           @error(strtolower($k))
                             <div class="help-block">{{ $message }}</div>
                           @enderror
@@ -61,72 +61,5 @@
       </div>
     </section>
 </div>
-@endsection
-@section('js')
-
-<script>
-  $(document).ready(function () {
-
-     $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
- 
-        $('#image').change(function(){
-          
-            let reader = new FileReader();
-            reader.onload = (e) => { 
-              $('#preview').attr('src', e.target.result); 
-            }
-            reader.readAsDataURL(this.files[0]); 
-      });
-
-    $('#setting').validate({
-        errorClass: ".alert-danger",
-        rules: {
-
-            app_name: {
-                required: true,
-            },
-            app_short_name: {
-                required: true, 
-            },
-            email_username:{
-                required: true,
-                email: true
-            },
-            email_password:{
-                required: true,
-            },
-            email_host:{
-                required: true,
-            },
-            email_port:{
-                required: true,
-                digits: true,
-            },
-            email_encryption:{
-                required: true,
-            },
-            email_from_name:{
-                required: true,
-            },
-            email_from_address:{
-                required: true,
-                email: true,
-            },
-            commission_rate:{
-                required: true,
-                digits: true,
-            },
-            cancel_charge:{
-                required: true,
-                digits: true,
-            }
-        }
-    });
-});
-</script>
 @endsection
 
