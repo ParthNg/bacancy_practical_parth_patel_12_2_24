@@ -75,7 +75,7 @@
     var element = $(this);
     $.ajax({
       type:'post',
-      url: "{{route('status_pizza')}}",
+      url: "{{route('status_product')}}",
       data: {
               "status": status, 
               "id" : id,  

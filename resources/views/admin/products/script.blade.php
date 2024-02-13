@@ -69,7 +69,6 @@
                           toastr.success(response.success);
                           setTimeout(function(){
                             location.reload();
-                            // location.href =  "{{route('crusts.index')}}";
                           }, 2000);
                       } else {
                           toastr.error(response.error);
