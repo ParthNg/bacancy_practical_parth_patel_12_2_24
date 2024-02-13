@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class InventoryNotification extends Mailable
+class OverallInventoryNotification extends Mailable
 {
     use Queueable, SerializesModels;
     protected $inventoryRecords;
@@ -29,8 +29,8 @@ class InventoryNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.inventory_notification')
+        return $this->view('mail.overall_inventory_notification')
                     ->with('inventoryRecords', $this->inventoryRecords)
-                    ->subject('Expiring lots in your inventory');
+                    ->subject('Overall Inventory');
     }
 }
