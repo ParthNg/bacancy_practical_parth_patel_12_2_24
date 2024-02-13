@@ -1,0 +1,98 @@
+.error {color:red}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../../loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+.my-confirm-class {
+    padding: 3px 6px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-color: #337ab7;
+    text-decoration: none;
+}
+
+.my-cancel-class {
+    padding: 3px 6px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 4px;
+    background-color: #a94442;
+    text-decoration: none;
+}
+#new_password, #confirm_password{color: #000 !important}
+
+ .required:after {
+    content:" *";
+    color: red;
+  }
+
+
+ .skin-blue .main-header .navbar {background-color: #fd9d3e;}
+.skin-blue .main-header .logo {background-color: #000;}
+.skin-blue .main-header .logo:hover {background-color: #fff !important;}
+.logo-mini {color: #df900e}
+.skin-blue .main-header li.user-header {background-color: #df900e;}
+.main-header .logo img {padding: 0px 0px 7px;}
+.skin-blue .wrapper, .skin-blue .main-sidebar, .skin-blue .left-side {
+    background-color: #161514;
+}
+.skin-blue .sidebar a {
+    color: #ffffff;
+}
+.skin-blue .sidebar-menu>li.header {
+    color: #4b646f;
+    background: #955f06;
+}
+.skin-blue .sidebar-menu>li>.treeview-menu {
+    margin: 0 1px;
+    background: #262522;
+}
+menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #4a2f02;
+}
+.skin-blue .sidebar-menu .treeview-menu>li>a {
+    color: #fff;
+}
+.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a, .skin-blue .sidebar-menu>li.menu-open>a {
+    color: #fff;
+    background: #fd9d3e;
+}
+.select2-container--default .select2-selection--single, .select2-selection .select2-selection--single {
+    border: 1px solid #d2d6de;
+    border-radius: 0;
+    padding: 6px 12px;
+    height: 34px;
+}
+.skin-blue .sidebar-menu .treeview-menu>li.active>a, .skin-blue .sidebar-menu .treeview-menu>li>a:hover {
+    color: #fd9d3e;
+}
+.box.box-info {
+    border-top-color: #fd9d3e;
+}
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: #f37e0a;
+}
+.sidebar-menu>li>a {
+    padding: 10px 5px 10px 15px;
+    display: block;
+}
+hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #403d3d;
+}
